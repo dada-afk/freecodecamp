@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Amazon Survey Form</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <p><a href="https://www.amazon.de"><img class="logo" src="https://images.easyfundraising.org.uk/retailer/cropped/amazon.png"></a></p>
+    <h1 id="title">Amazon Survey Form</h1>
+    <p id="description">Thank you for taking to time to help us improve the platform!</p>
+    <form id="survey-form">
+       <fieldset> 
+        <label for="name" id="name-label">Full name</label>
+          <input id="name" type="text" required placeholder="Enter your name"></input>
+      </fieldset>
+      <fieldset>
+        <label for="email" id="email-label">Email</label>
+          <input id="email" type="email" required placeholder="Enter your email"></input>
+      </fieldset>
+      <fieldset>
+        <label for="number" id="number-label">Age (optional)</label>
+          <input id="number" type="number" min="14" max="120" placeholder="Age"></input>
+      </fieldset>
+      <fieldset>
+        <label id="purchase">Have you ever made a purchase at <a href="https://www.amazon.de">amazon.com</a>?</label>
+         <label><input type="radio" value="yes" name="purchase" checked> Yes</input></label>
+          <label><input type="radio" value="no" name="purchase"> No</input></label>
+      </fieldset>
+      <fieldset>
+        <label id="where">Where have you heard of us?</label>
+          <select id="dropdown">
+            <option name="select one" value="">select one</option>
+            <option name="social media" value="1">Social media</option>
+            <option name="friends and family" value="2">Friends and family</option>
+            <option name="other" value="3">Other</option>
+          </select>
+        </fieldset>
+        <fieldset>
+         <label id="what">What products do you frequently purchase online?</label>
+          <label><input type="checkbox" value="1">Clothing</input></label>
+          <label><input type="checkbox" value="2">Electronics</input></label>
+          <label><input type="checkbox" value="3">Entertainment (books, movies, music etc.)</input></label>
+          <label><input type="checkbox" value="4">Other</input></label>
+        </fieldset>
+        <fieldset>
+          <label id="comments">Do you have any comments or suggestions?</label>
+            <textarea class="comments" placeholder="Enter your comment here..." rows="3" cols="74"></textarea>
+        </fieldset>
+        <fieldset id="button">
+          <button type="submit" id="submit" name="submit">Submit</button>
+        </fieldset>
+    </form>
+  </body>
+</html>

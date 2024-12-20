@@ -1,0 +1,146 @@
+* {
+  font-family: "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.company-name {
+  text-align: center;
+  font-size: 3rem;
+  margin: auto;
+}
+
+body {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  background-color: #1d301d;
+}
+
+nav li {
+  float: left;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f1f1f1;
+}
+
+#subscription-plans {
+  scroll-margin-top: 310px;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+li a:hover {
+  background-color: #2b472b;
+}
+
+.subscription {
+  border: 2.5px solid black;
+  min-width: 15vw;
+  max-width: 30vw;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 1rem;
+}
+
+.subcription-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.plan-name {
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+button {
+  width: 70%;
+  font-size: 1.3rem;
+  background-color: #003333;
+  color: white;
+  font-variant: small-caps;
+}
+
+button:hover {
+  background-color: #014a4a;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+footer {
+  height: 8rem;
+}
+
+form label {
+  font-size: 2rem;
+}
+
+#email {
+  width: 20rem;
+  height: 2rem;
+}
+
+#submit {
+  width: 5rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: #003333;
+  color: white;
+  font-variant: small-caps;
+}
+
+#submit:hover {
+  background-color: #014a4a;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+  .subcription-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

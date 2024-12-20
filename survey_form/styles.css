@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://s.yimg.com/ny/api/res/1.2/gqd3TT15WFmOTypyCS6mXg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/gobankingrates_644/d9fce044789ca5ccd17c841c4ce9a7f1)
+}
+
+label {
+  display: block;
+}
+
+select{
+  display: block;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #152238;
+}
+
+h1, p {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 15em;
+  height: 3em;
+  font-size: 1em;
+}
+
+.logo {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="number"], input[type="text"], input[type="email"], input[type="textarea"] {
+  width: 42em;
+}
+
+input[type="textarea"] {
+  height: 7em;
+}
+
+fieldset {
+  border: 0;
+  padding: 10;
+}
+
+#name-label, #button {
+  padding-top: 20;
+}
+
+#button {
+  padding-bottom: 20;
+}
+
+#name-label, #email-label, #number-label, #purchase, #where, #what, #comments, button{
+  font-weight: bold;
+}
+
+a {
+  color: white;
+}

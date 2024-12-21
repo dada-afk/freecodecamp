@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --focus: #eb631b;
+  --bg-primary: #ebebdf;
+  --bg-secondary: #c19570;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background-color 0.5s ease;
+}
+
+li a:hover {
+  background-color: #333232;
+}
+
+li a.active {
+  background-color: var(--focus);
+}
+
+#welcome-section {
+  scroll-margin-top: 310px;
+  background-color: var(--bg-primary);
+  height: 80em;
+  position: relative;
+}
+
+.greeting {
+  text-align: center;
+  padding: 35rem;
+}
+
+.position {
+  color: var(--focus);
+  font-style: italic;
+  font-size: 2em;
+  margin-top: 0.5em;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+#projects {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  height: 80em;
+  padding: 22em;
+}
+
+#projects h1 {
+  font-size: 3rem;
+}
+
+.project-tile {
+  width: 25em;
+  height: 25em;
+  background-color: var(--bg-primary);
+  display: inline-block;
+  justify-content: center;
+  margin: 3rem 2rem;
+  transition: 0.5s ease-in-out;
+}
+
+.project-img {
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-caption {
+  padding: 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-tile a:link,
+.project-tile a:visited,
+.project-tile a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+.project-tile a:hover {
+  color: var(--focus);
+}
+
+.project-tile:hover {
+  transform: scale(1.1);
+}
+
+#contact {
+  height: 80em;
+  background-color: #2b3349;
+  padding: 30em;
+  text-align: center;
+}
+
+.work {
+  color: white;
+  font-size: 4rem;
+  padding: 1em;
+}
+
+.contact-links a:link,
+.contact-links a:visited,
+.contact-links a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-links a {
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 105em;
+  }
+}

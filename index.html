@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Personal Portfolio</title>
+  </head>
+  <body onscroll="setActiveScroll()">
+    <nav id="navbar">
+      <ul>
+        <li><a class="nav active" href="#welcome-section">Welcome</a></li>
+        <li><a class="nav" href="#projects">Projects</a></li>
+        <li><a class="nav" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="welcome-section" class="section">
+      <div class="greeting">
+        <h1 class="name">Hi I am Daniella,</h1>
+        <h2 class="position">a web developer</h2>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <h1>You can check out my projects here ↴</h1>
+      <div class="project-tile">
+        <a href="./survey_form/index.html" target="_blank">
+          <img class="project-img" src="https://lh3.googleusercontent.com/pw/AP1GczMn-r6RgNxXZi9OKX7fQO4N3Eb86jmMHlfRazL4A62TUVZSZaX0pIwuvTruWyngaZKMOPPUnO2xc6Z_UIDXfYesexZ3qiqPf_V4vQzbiIqREmupg2I=w2400">
+          <p class="img-caption">Amazon Survey Form</p>
+        </a>
+      </div>
+      <div class="project-tile">
+        <a href="./tribute_page/index.html" target="_blank">
+          <img class="project-img" src="https://lh3.googleusercontent.com/pw/AP1GczPiJENz_w9Cy7fU8J43vJIZR80PUxH05iej4jYks4fqreyjf3Ayj0hVsxBVjjdgsSfXGoXD-DPaKojzBmmljJfew7xBNbWMqO9Lz12_sVUeOgUHaSs=w2400">
+          <p class="img-caption">Tribute Page</p>
+        </a>
+      </div>
+      <div class="project-tile">
+        <a href="./product_landing_page/index.html" target="_blank">
+          <img class="project-img" src="https://lh3.googleusercontent.com/pw/AP1GczPF3ZpMB7psPiI3F4vq9kZMZvrB4kC_guldj54TxOM2SScWx9lVpPSUOZXFkjeh6Bcr9UGKoHQUCL16d9BxX2Awi4Sh5Md_1-f6oOUirxoN4eMr84M=w2400">
+          <p class="img-caption">Nerd Crate</p>
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="contact-links">
+        <h1 class="work">Let's work together</h1>
+        <a id="profile-link" href="https://github.com/dada-afk" target="_blank">
+          <i class="fa fa-github"></i>
+          GitHub
+        </a>
+        <a id="profile-link" href="https://www.linkedin.com/in/lilla-daniella-rus/" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </body>
+  <script>
+      let navElements = document.getElementsByClassName("nav");
+      let sections = document.getElementsByClassName("section");
+
+      const setActive = () => {
+        let element = event.srcElement;
+        for(let i = 0; i < navElements.length; i++) {
+          navElements[i].className = "nav";
+        }
+        element.className = "nav active";
+      }
+
+      for(let i = 0; i < navElements.length; i++) {
+        navElements[i].addEventListener("click", setActive);
+      }
+      
+      const setActiveScroll = () => {
+        let sectionOneTop = sections[0].offsetTop;
+        let sectionTwoTop = sections[1].offsetTop;
+        let sectionThreeTop = sections[2].offsetTop;
+        let currentScroll = document.documentElement.scrollTop;
+        if(currentScroll >= sectionTwoTop) {
+          navElements[1].className = "nav active";
+          navElements[2].className = "nav";
+          navElements[0].className = "nav";
+        }
+        if(currentScroll >= sectionThreeTop -100) {
+          navElements[2].className = "nav active";
+          navElements[1].className = "nav";
+          navElements[0].className = "nav";
+        }
+        if(currentScroll < sectionTwoTop) {
+          navElements[0].className = "nav active";
+          navElements[2].className = "nav";
+          navElements[1].className = "nav";
+        }
+        console.log(document.documentElement.scrollTop);
+        console.log(sections[0].offsetTop);
+      }
+    </script>
+</html>
